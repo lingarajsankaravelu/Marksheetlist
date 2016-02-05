@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.hourglass.lingaraj.marksheetlist.marksheetlist">
+   <RelativeLayout
+       android:id="@+id/marksheet_heading"
+       android:background="@color/colorPrimary"
+       android:layout_alignParentTop="true"
+       android:layout_width="match_parent"
+       android:layout_height="100dp">
+       <TextView
+           android:layout_centerHorizontal="true"
+           android:layout_centerInParent="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Marks Report"
+           android:textColor="@android:color/white"
+           android:textSize="20dp" />
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/class_section_type_container"
+        android:layout_below="@id/marksheet_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/class_heading"
+            android:text="class"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+          />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Class 4"
+            android:textColor="@android:color/black"
+            android:id="@+id/class_spinner"
+            android:layout_toEndOf="@+id/class_heading"
+            android:layout_alignStart="@+id/section_spinner" />
+        <TextView
+            android:layout_marginLeft="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Section_heading"
+            android:layout_marginTop="20dp"
+            android:text="Section"
+
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/class_spinner" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/section_spinner"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/Section_heading" />
+        <TextView
+            android:layout_marginLeft="80dp"
+            android:layout_below="@+id/Section_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/select_heading"
+            android:layout_marginTop="10dp"
+            android:text="Select"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_repor_spinner"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/Section_heading"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/section_spinner" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/class_section_type_container"
+        android:layout_marginTop="10dp"
+        android:id="@+id/first_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:tag="Exams/test"
+            android:background="@android:color/holo_orange_light"
+            android:layout_width="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_height="wrap_content">
+            <View android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:layout_height="1dp" />
+
+
+            <TableRow
+                android:id="@+id/tableRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:textSize="18dp"
+                    android:text="Exam/Test"
+                    android:gravity="center"
+                    android:layout_span="6"
+                    />
+
+
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:layout_height="2dp" />
+
+
+            <TableRow
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+
+                >
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+                <TextView
+                 android:text="HW 1"
+                 />
+                <View android:layout_width="2dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                   android:text="HW 2"
+                   />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="HW 3"
+                    />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="HW 4"
+                    />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="HW 5"
+                    />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="Exam 1"
+                    />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="HW 5"
+                    />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="HW 6"
+                    />
+                <View android:layout_width="1dp"
+                    android:background="@android:color/white"
+                    android:layout_height="match_parent"/>
+
+
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:layout_height="1dp" />
+
+
+
+        </TableLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/first_table_layout"
+        android:id="@+id/second_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/student_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Student"
+            android:textSize="15dp"
+            />
+
+        <TableLayout
+            android:layout_below="@+id/student_heading"
+            android:tag="Exams/test"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_height="wrap_content">
+
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <TableRow>
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="Bob"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="90%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="88.1%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="A"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <TableRow>
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="Sally"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="85.1%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="A"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <TableRow>
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="sue"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="85.1%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="A"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <TableRow>
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="jill"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="85.1%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="A"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <TableRow>
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="jon"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="85.1%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="A"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+            <TableRow>
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="Ted"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="70%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="80%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="85.1%"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:text="A"
+                    />
+                <View android:layout_width="0dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <View android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="1dp"/>
+
+
+
+
+
+
+
+
+
+        </TableLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
